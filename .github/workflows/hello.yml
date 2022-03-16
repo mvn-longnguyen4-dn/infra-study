@@ -10,5 +10,6 @@ jobs:
       - name: Hello
         shell: bash
         run: |
-         echo "TODAY=$(date + %y%m%d) >> $GITHUB_ENV
-         echo Hello world, to day is $TODAY
+          echo "NAME= Nguyen Dac Long" >> $GITHUB_ENV
+          echo "Mó nìn $NAME"
+ 
