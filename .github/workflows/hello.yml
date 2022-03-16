@@ -7,8 +7,6 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello
-        shell: bash
-        run: echo "NAME= Nguyen Dac Long" >> $GITHUB_ENV
-        run: echo "Mó nìn $NAME"
+      - run: echo "NAME= Nguyen Dac Long" >> $GITHUB_ENV
+      - run: echo "Mó nìn $NAME"
  
