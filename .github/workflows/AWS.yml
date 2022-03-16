@@ -1,4 +1,4 @@
-name: Dảk
+name: Dảk hôm quật
 on:
   push:
     branches: [ main ]
@@ -42,7 +42,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install docker-ce docker-ce-cli containerd.io
           sudo docker run hello-world
-      - name: Build Dockerfile
+      - name: Tạo image từ Dockerfile và Push image lên ECR.
         run: |
           aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 262288357419.dkr.ecr.us-east-1.amazonaws.com
           docker build -t magellanic .
