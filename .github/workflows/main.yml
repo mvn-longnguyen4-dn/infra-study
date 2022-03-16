@@ -43,5 +43,9 @@ jobs:
           sudo apt-get install docker-ce docker-ce-cli containerd.io
           sudo docker run hello-world
       - name: Build Dockerfile
-        run: docker build -t conchimnon .
+        run: |
+          aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 262288357419.dkr.ecr.us-east-1.amazonaws.com
+          docker build -t magellanic .
+          docker tag magellanic:latest 262288357419.dkr.ecr.us-east-1.amazonaws.com/magellanic:latest
+          docker push 262288357419.dkr.ecr.us-east-1.amazonaws.com/magellanic:latest
 
