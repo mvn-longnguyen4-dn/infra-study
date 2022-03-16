@@ -7,8 +7,7 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "NAME=Long đẹp trai" >> $GITHUB_ENV
-          echo "TODAY=$(date +%d/%m/%y)" >>  $GITHUB_ENV
-          echo "Hé lồ anh $NAME, hôm nay là $TODAY, nghỉ thôi chứ làm gì nữa"
+      - run: echo "NAME=Long đẹp trai" >> $GITHUB_ENV
+      - run: echo "TODAY=$(date +%d/%m/%y)" >>  $GITHUB_ENV
+      - run: echo "Hé lồ anh $NAME, hôm nay là $TODAY, nghỉ thôi chứ làm gì nữa"
  
