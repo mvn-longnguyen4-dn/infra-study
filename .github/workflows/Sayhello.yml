@@ -8,6 +8,6 @@ jobs:
     steps:
       - run: |
           echo "NAME=Long đẹp trai" >> $GITHUB_ENV
-          echo "TODAY=$(date +%d/%m/%y %H:%M:%S)" >>  $GITHUB_ENV
+          echo "TODAY=$(date +'%d/%m/%y %H:%M:%S')" >>  $GITHUB_ENV
           echo "Hé lồ anh $NAME, bây chừ là $TODAY, nghỉ thôi chứ làm gì nữa"
  
