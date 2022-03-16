@@ -12,6 +12,7 @@ jobs:
   AWS:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Cho biết vị trí hiện thư mục hiện tại đang làm việc.
         run: pwd
       - name: Liệt kê toàn bộ các file đang có tại ví trí đó.
@@ -26,7 +27,7 @@ jobs:
           aws-region: us-east-1
       - name: Show bucket s3
         run: aws s3 ls
-      - name: Docker
+      - name: Setup Docker
         run: |
           sudo apt-get update
           sudo apt-get install \
@@ -41,3 +42,6 @@ jobs:
           sudo apt-get update
           sudo apt-get install docker-ce docker-ce-cli containerd.io
           sudo docker run hello-world
+      - name: Build Dockerfile
+        run: docker build -t conchimnon .
+
