@@ -44,7 +44,7 @@ jobs:
           sudo docker run hello-world
       - name: Tạo image từ Dockerfile và Push image lên ECR.
         run: |
-          echo "git_hash=$(git rev-parse --short "$GITHUB_SHA")" >> $GITHUB_HASH
+          git_hash=$(git rev-parse --short "$GITHUB_SHA")
           aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 262288357419.dkr.ecr.us-east-1.amazonaws.com
           docker build -t magellanic .
           docker tag magellanic:latest 262288357419.dkr.ecr.us-east-1.amazonaws.com/magellanic:$git_hash
