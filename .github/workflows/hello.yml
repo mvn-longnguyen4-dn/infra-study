@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: Print hello
         shell: bash
-        run: echo "hello Long"
+        run: echo "hello ${{ secrets.GH_USERNAME }}"
