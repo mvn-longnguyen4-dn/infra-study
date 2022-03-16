@@ -9,7 +9,6 @@ jobs:
     steps:
       - name: Hello
         shell: bash
-        run: |
-          echo "NAME= Nguyen Dac Long" >> $GITHUB_ENV
-          echo "Mó nìn $NAME"
+        run: echo "NAME= Nguyen Dac Long" >> $GITHUB_ENV
+        run: echo "Mó nìn $NAME"
  
