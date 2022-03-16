@@ -1,0 +1,13 @@
+name: Hi anh
+on:
+  schedule:
+    - cron: "0/10 * * * *"
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      run: |
+        echo "NAME=Long đẹp trai" >> $GITHUB_ENV
+        echo "TODAY=$(date +%d/%m/%y %h:%m)" >>  $GITHUB_ENV
+        echo "Hé lồ anh $NAME, bây chừ là $TODAY, nghỉ thôi chứ l gì nữa"
+ 
