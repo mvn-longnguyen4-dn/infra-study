@@ -1,3 +1,4 @@
+name: hello
 on:
   schedule:
     - cron: "0/10 * * * *"
@@ -7,6 +8,7 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "NAME= Nguyen Dac Long" >> $GITHUB_ENV
-      - run: echo "Mó nìn $NAME"
+      - run: echo "NAME= Mực" >> $GITHUB_ENV
+      - run: echo "TODAY=$date >>  $GITHUB_ENV
+      - run: echo "Mó nìn $NAME, hum ni là $TODAY"
  
