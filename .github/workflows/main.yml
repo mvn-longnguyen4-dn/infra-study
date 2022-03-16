@@ -28,6 +28,9 @@ jobs:
         run: aws s3 ls
       - name: Docker
         run: |
-          set -x
-          docker version
-          docker run --rm hello-world
+          sudo apt-get update
+          sudo apt-get install \
+            ca-certificates \
+            curl \
+            gnupg \
+            lsb-release
