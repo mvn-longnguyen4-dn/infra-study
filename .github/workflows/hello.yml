@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "NAME= Mực" >> $GITHUB_ENV
-      - run: echo "TODAY=$date >>  $GITHUB_ENV
+      - run: echo "TODAY=$(date +%y-%m-%d)" >>  $GITHUB_ENV
       - run: echo "Mó nìn $NAME, hum ni là $TODAY"
  
